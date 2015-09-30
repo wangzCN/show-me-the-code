@@ -1,3 +1,7 @@
+# WINDOWS 10
+# python 2.7.10
+# Eclipse with pyDev
+# mysql-5.6.26-winx64
 '''
 
 @author: Wangz.cn
@@ -14,15 +18,13 @@ def newKey(length = 16):
         str += chars[random.randint(0, str_len)]
     return str
 
-# link to Mysql
 con = MySqlCon.Con()
 
 for i in range(200):
     
     key = newKey()
     print(key)
-    
-    #insert to mysql
     MySqlCon.Insert(con, key)
     
 MySqlCon.done(con)
+        
